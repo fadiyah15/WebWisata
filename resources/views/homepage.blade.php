@@ -1,1805 +1,670 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Travela - Tourism Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+    <title>YOUGOTravel</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="{{asset('homepage')}}/assets/img/favicon.png" rel="icon">
+    <link href="{{asset('homepage')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
+    <!-- Vendor CSS Files -->
+    <link href="{{asset('homepage')}}/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="{{asset('homepage')}}/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="{{asset('homepage')}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('homepage')}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{asset('homepage')}}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="{{asset('homepage')}}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="{{asset('homepage')}}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="{{asset('travela')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{{asset('homepage')}}/assets/css/style.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="{{asset('travela')}}/assets/css/style.css" rel="stylesheet">
-    </head>
+    <!-- =======================================================
+  * Template Name: Restaurantly - v3.1.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
-    <body>
+<body>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+            <marquee behavior="scroll" direction="right">
+                <span>
+                    <h1 class="logo me-auto me-lg-0">
+                        <font color="#cda45e">YOUGOTravel</font>
+                    </h1>
+                </span>
+            </marquee>
 
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
-            <div class="row gx-0">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="{{asset('homepage')}}/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Travela</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="services.html" class="nav-item nav-link">Services</a>
-                        <a href="packages.html" class="nav-item nav-link">Packages</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="tour.html" class="dropdown-item">Explore Tour</a>
-                                <a href="booking.html" class="dropdown-item">Travel Booking</a>
-                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
-                                <a href="guides.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
-                </div>
-            </nav>
-
-            <!-- Carousel Start -->
-            <div class="carousel-header">
-                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <img src="img/carousel-2.jpg" class="img-fluid" alt="Image">
-                            <div class="carousel-caption">
-                                <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Explore The World</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Let's The World Together!</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel-1.jpg" class="img-fluid" alt="Image">
-                            <div class="carousel-caption">
-                                <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Explore The World</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Find Your Perfect Tour At Travel</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel-3.jpg" class="img-fluid" alt="Image">
-                            <div class="carousel-caption">
-                                <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Explore The World</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">You Like To Go?</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="false"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                        <span class="carousel-control-next-icon btn bg-primary" aria-hidden="false"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            <!-- Carousel End -->
-        </div>
-        <div class="container-fluid search-bar position-relative" style="top: -50%; transform: translateY(-50%);">
-            <div class="container">
-                <div class="position-relative rounded-pill w-100 mx-auto p-5" style="background: rgba(19, 53, 123, 0.8);">
-                    <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
-                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute me-2" style="top: 50%; right: 46px; transform: translateY(-50%);">Search</button>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- About Start -->
-        <div class="container-fluid about py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-5">
-                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
-                            <img src="img/about-img.jpg" class="img-fluid w-100 h-100" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
-                        <h5 class="section-about-title pe-3">About Us</h5>
-                        <h1 class="mb-4">Welcome to <span class="text-primary">Travela</span></h1>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos voluptatem suscipit neque enim, doloribus ipsum rem eos distinctio, dignissimos nisi saepe nulla? Libero numquam perferendis provident placeat molestiae quia?</p>
-                        <div class="row gy-2 gx-4 mb-4">
-                            <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-        <!-- Services Start -->
-        <div class="container-fluid bg-light service py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Searvices</h5>
-                    <h1 class="mb-0">Our Services</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Service More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services End -->
-
-        <!-- Destination Start -->
-        <div class="container-fluid destination py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Destination</h5>
-                    <h1 class="mb-0">Popular Destination</h1>
-                </div>
-                <div class="tab-class text-center">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                                <span class="text-dark" style="width: 150px;">All</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                <span class="text-dark" style="width: 150px;">USA</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                <span class="text-dark" style="width: 150px;">Canada</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                <span class="text-dark" style="width: 150px;">Europe</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                <span class="text-dark" style="width: 150px;">China</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-6">
-                                <span class="text-dark" style="width: 150px;">Singapore</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="col-xl-8">
-                                    <div class="row g-4">
-                                        <div class="col-lg-6">
-                                            <div class="destination-img">
-                                                <img class="img-fluid rounded w-100" src="img/destination-1.jpg" alt="">
-                                                <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">New York City</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                                </div>
-                                                <div class="search-icon">
-                                                    <a href="img/destination-1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="destination-img">
-                                                <img class="img-fluid rounded w-100" src="img/destination-2.jpg" alt="">
-                                                <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">Las vegas</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                                </div>
-                                                <div class="search-icon">
-                                                    <a href="img/destination-2.jpg" data-lightbox="destination-2"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="destination-img">
-                                                <img class="img-fluid rounded w-100" src="img/destination-7.jpg" alt="">
-                                                <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                                </div>
-                                                <div class="search-icon">
-                                                    <a href="img/destination-7.jpg" data-lightbox="destination-7"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="destination-img">
-                                                <img class="img-fluid rounded w-100" src="img/destination-8.jpg" alt="">
-                                                <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                                    <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                                </div>
-                                                <div class="search-icon">
-                                                    <a href="img/destination-8.jpg" data-lightbox="destination-8"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4">
-                                    <div class="destination-img h-100">
-                                        <img class="img-fluid rounded w-100 h-100" src="img/destination-9.jpg" style="object-fit: cover; min-height: 300px;" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-9.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-4.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-4.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los angelas</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-4" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-5" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-6" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Destination End -->
-
-        <!-- Explore Tour Start -->
-        <div class="container-fluid ExploreTour py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Explore Tour</h5>
-                    <h1 class="mb-4">The World</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
-                    </p>
-                </div>
-                <div class="tab-class text-center">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#NationalTab-1">
-                                <span class="text-dark" style="width: 250px;">National Tour Category</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#InternationalTab-2">
-                                <span class="text-dark" style="width: 250px;">International tour Category</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="NationalTab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="national-item">
-                                        <img src="img/explore-tour-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                        <div class="national-content">
-                                            <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">Weekend Tour</h5>
-                                                <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="national-plus-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="national-item">
-                                        <img src="img/explore-tour-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                        <div class="national-content">
-                                            <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">Holiday Tour</h5>
-                                                <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="national-plus-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="national-item">
-                                        <img src="img/explore-tour-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                        <div class="national-content">
-                                            <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">Road Trip</h5>
-                                                <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="tour-offer bg-info">15% Off</div>
-                                        <div class="national-plus-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="national-item">
-                                        <img src="img/explore-tour-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                        <div class="national-content">
-                                            <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">Historical Trip</h5>
-                                                <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="national-plus-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="national-item">
-                                        <img src="img/explore-tour-5.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                        <div class="national-content">
-                                            <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">Family Tour</h5>
-                                                <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="tour-offer bg-warning">50% Off</div>
-                                        <div class="national-plus-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="national-item">
-                                        <img src="img/explore-tour-6.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                        <div class="national-content">
-                                            <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">Beach Tour</h5>
-                                                <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="national-plus-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="InternationalTab-2" class="tab-pane fade show p-0">
-                            <div class="InternationalTour-carousel owl-carousel">
-                                <div class="international-item">
-                                    <img src="img/explore-tour-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Australia</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 8 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>143+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="tour-offer bg-success">30% Off</div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="international-item">
-                                    <img src="img/explore-tour-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Germany</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 12 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>21+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="international-item">
-                                    <img src="img/explore-tour-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="tour-offer bg-warning">45% Off</div>
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Spain</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 9 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>133+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="international-item">
-                                    <img src="img/explore-tour-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Japan</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 8 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>137+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="international-item">
-                                    <img src="img/explore-tour-5.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="tour-offer bg-info">70% Off</div>
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">London</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 17 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>26+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Explore Tour Start -->
-
-        <!-- Packages Start -->
-        <div class="container-fluid packages py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Packages</h5>
-                    <h1 class="mb-0">Awesome Packages</h1>
-                </div>
-                <div class="packages-carousel owl-carousel">
-                    <div class="packages-item">
-                        <div class="packages-img">
-                            <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
-                            <div class="packages-price py-2 px-4">$349.00</div>
-                        </div>
-                        <div class="packages-content bg-light">
-                            <div class="p-4 pb-0">
-                                <h5 class="mb-0">Venice - Italy</h5>
-                                <small class="text-uppercase">Hotel Deals</small>
-                                <div class="mb-3">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                </div>
-                                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
-                            </div>
-                            <div class="row bg-primary rounded-bottom mx-0">
-                                <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
-                                </div>
-                                <div class="col-6 text-end px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="packages-item">
-                        <div class="packages-img">
-                            <img src="img/packages-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
-                            <div class="packages-price py-2 px-4">$449.00</div>
-                        </div>
-                        <div class="packages-content bg-light">
-                            <div class="p-4 pb-0">
-                                <h5 class="mb-0">The New California</h5>
-                                <small class="text-uppercase">Hotel Deals</small>
-                                <div class="mb-3">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                </div>
-                                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
-                            </div>
-                            <div class="row bg-primary rounded-bottom mx-0">
-                                <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
-                                </div>
-                                <div class="col-6 text-end px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="packages-item">
-                        <div class="packages-img">
-                            <img src="img/packages-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
-                            <div class="packages-price py-2 px-4">$549.00</div>
-                        </div>
-                        <div class="packages-content bg-light">
-                            <div class="p-4 pb-0">
-                                <h5 class="mb-0">Discover Japan</h5>
-                                <small class="text-uppercase">Hotel Deals</small>
-                                <div class="mb-3">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                </div>
-                                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
-                            </div>
-                            <div class="row bg-primary rounded-bottom mx-0">
-                                <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
-                                </div>
-                                <div class="col-6 text-end px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="packages-item">
-                        <div class="packages-img">
-                            <img src="img/packages-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Thayland</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
-                            <div class="packages-price py-2 px-4">$649.00</div>
-                        </div>
-                        <div class="packages-content bg-light">
-                            <div class="p-4 pb-0">
-                                <h5 class="mb-0">Thayland Trip</h5>
-                                <small class="text-uppercase">Hotel Deals</small>
-                                <div class="mb-3">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                </div>
-                                <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat</p>
-                            </div>
-                            <div class="row bg-primary rounded-bottom mx-0">
-                                <div class="col-6 text-start px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
-                                </div>
-                                <div class="col-6 text-end px-0">
-                                    <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Packages End -->
-
-        <!-- Gallery Start -->
-        <div class="container-fluid gallery py-5 my-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Our Gallery</h5>
-                <h1 class="mb-4">Tourism & Traveling Gallery.</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
-                </p>
-            </div>
-            <div class="tab-class text-center">
-                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#GalleryTab-1">
-                            <span class="text-dark" style="width: 150px;">All</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-2">
-                            <span class="text-dark" style="width: 150px;">World tour</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-3">
-                            <span class="text-dark" style="width: 150px;">Ocean Tour</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-4">
-                            <span class="text-dark" style="width: 150px;">Summer Tour</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-5">
-                            <span class="text-dark" style="width: 150px;">Sport Tour</span>
-                        </a>
-                    </li>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">
+                            <h5>Home</h5>
+                        </a></li>
+                    <li><a class="nav-link scrollto" href="#about">
+                            <h5>About</h5>
+                        </a></li>
+                    <li><a class="nav-link scrollto" href="#events">
+                            <h5>Paket Wisata</h5>
+                        </a></li>
+                    <li><a class="nav-link scrollto" href="#chefs">
+                            <h5>Obyek Wisata</h5>
+                        </a></li>
+                    <li><a class="nav-link scrollto" href="#gallery">
+                            <h5>Gallery</h5>
+                        </a></li>
+                    <li><a class="nav-link scrollto" href="#reservation">
+                            <h5>Reservation</h5>
+                        </a></li>
+                    <li><a class="nav-link scrollto" href="#contact">
+                            <h5>Contact</h5>
+                        </a></li>
                 </ul>
-                <div class="tab-content">
-                    <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-1.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-1.jpg" data-lightbox="gallery-1" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-4.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-4.jpg" data-lightbox="gallery-4" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-5.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-5.jpg" data-lightbox="gallery-5" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-6.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-6.jpg" data-lightbox="gallery-6" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-7.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-7.jpg" data-lightbox="gallery-7" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-8.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-8.jpg" data-lightbox="gallery-8" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-9.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-9.jpg" data-lightbox="gallery-9" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-10.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-10.jpg" data-lightbox="gallery-10" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-2" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-3" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-4" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="GalleryTab-5" class="tab-pane fade show p-0">
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-2.jpg" data-lightbox="gallery-2" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
-                                <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
-                                    <div class="gallery-content">
-                                        <div class="gallery-info">
-                                            <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-plus-icon">
-                                        <a href="img/gallery-3.jpg" data-lightbox="gallery-3" class="my-auto"><i class="fas fa-plus fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a href="{{ route('login') }}" class="book-a-table-btn scrollto d-none d-lg-flex">Login</a>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Welcome to <span>YOUGOTravel</span></h1>
+                    <h2>Make your holiday fun and awesome with YOUGOTravel!</h2>
+                </div>
+
+                <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://youtu.be/KidLdBo49Ds" class="glightbox play-btn"></a>
                 </div>
             </div>
         </div>
-        <!-- Gallery End -->
+    </section>
+    <!-- End Hero -->
 
-        <!-- Tour Booking Start -->
-        <div class="container-fluid booking py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <h5 class="section-booking-title pe-3">Booking</h5>
-                        <h1 class="text-white mb-4">Online Booking</h1>
-                        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
-                        </p>
-                        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
-                        </p>
-                        <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="about-img">
+                            <img src="{{asset('homepage')}}/assets/img/wisata3.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <h1 class="text-white mb-3">Book A Tour Deals</h1>
-                        <p class="text-white mb-4">Get <span class="text-warning">50% Off</span> On Your First Adventure Trip With Travela. Get More Deal Offers Here.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h1>About Us</h1>
+                        <p class="fst-italic">
+                            Salam Hangat Traveller!
+                        </p>
+                        <p align="justify">
+                            YOUGOTravel merupakan situs Website yanng dibuat oleh Fadiyah Nur Afidah.
+                            Website ini masih terbilang baru dan akan terus dikembangkan dan ditingkatkan hingga menjadi
+                            website yang sempurna.
+                            kami menyediakan layanan wisata yang berkualitas dan tentunya sangat terjamin dan terpercaya
+                            kualitasnya.
+                        </p>
+                        <p align="justify">
+                            <h3>Happy Travel and Happiness !</h3>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Why Us</h2>
+                    <p>Why Choose Our Travel?</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                            <span>01</span>
+                            <h4>Harga Terjangkau</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                            <span>02</span>
+                            <h4>Destinasi OK</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                            <span>03</span>
+                            <h4>Aman & Nyaman</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Why Us Section -->
+
+        <!-- ======= Events Section ======= -->
+        <section id="events" class="events">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Paket Wisata</h2>
+                    <p>Choose your best place</p>
+                </div>
+
+                @if($paket_wisata->isEmpty())
+                    <p>Tidak ada paket wisata yang tersedia saat ini.</p>
+                @else
+                    <div class="events-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            @foreach ($paket_wisata->slice(0,3) as $key => $pkt)
+                                <div class="swiper-slide">
+                                    <div class="row event-item">
+                                        <div class="col-lg-6">
+                                            <img src="{{'/storage/Foto paketwisata/' .$pkt->foto1}}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                            <h3><a href="{{route('paket_wisata.detail', $pkt->id)}}">{{$pkt->nama_paket}}</a></h3>
+                                            <div class="price">
+                                                <p><span>${{$pkt->harga_per_pack}}</span></p>
+                                            </div>
+                                            <p><b>DESKRIPSI :</b></p>
+                                            <p>{{$pkt->deskripsi}}</p>
+                                            <p><b>FASILITAS :</b></p>
+                                            <p>{{$pkt->fasilitas}}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-white border-0" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                @endif
+            </div>
+        </section>
+        <!-- End Events Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Testimonials</h2>
+                    <p>What they're saying about us</p>
+                </div>
+
+                <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                                    risus at semper.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{{asset('homepage')}}/assets/img/testimonials/testimonials-1.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                                    legam anim culpa.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{{asset('homepage')}}/assets/img/testimonials/testimonials-2.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
+                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
+                                    minim.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{{asset('homepage')}}/assets/img/testimonials/testimonials-3.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
+                                    dolore labore illum veniam.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{{asset('homepage')}}/assets/img/testimonials/testimonials-4.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
+                                    culpa fore nisi cillum quid.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{{asset('homepage')}}/assets/img/testimonials/testimonials-5.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="gallery">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Gallery</h2>
+                    <p>Some photos from Our Restaurant</p>
+                </div>
+            </div>
+
+            <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row g-0">
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-1.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-2.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-3.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-4.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-5.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-6.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-7.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="{{asset('homepage')}}/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{{asset('homepage')}}/assets/img/gallery/gallery-8.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Gallery Section -->
+
+        <!-- ======= Chefs Section ======= -->
+        <section id="chefs" class="chefs">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Chefs</h2>
+                    <p>Our Proffesional Chefs</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="{{asset('homepage')}}/assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Walter White</h4>
+                                    <span>Master Chef</span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-white border-0" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
-                                        </select>
-                                        <label for="select1">Destination</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="SelectPerson">
-                                            <option value="1">Persons 1</option>
-                                            <option value="2">Persons 2</option>
-                                            <option value="3">Persons 3</option>
-                                        </select>
-                                        <label for="SelectPerson">Persons</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="CategoriesSelect">
-                                            <option value="1">Kids</option>
-                                            <option value="2">1</option>
-                                            <option value="3">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                        <label for="CategoriesSelect">Categories</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control bg-white border-0" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="{{asset('homepage')}}/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Sarah Jhonson</h4>
+                                    <span>Patissier</span>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                            <img src="{{asset('homepage')}}/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>William Anderson</h4>
+                                    <span>Cook</span>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Chefs Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <iframe style="border:0; width: 100%; height: 350px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+
+                            <div class="open-hours">
+                                <i class="bi bi-clock"></i>
+                                <h4>Open Hours:</h4>
+                                <p>
+                                    Monday-Saturday:<br>
+                                    11:00 AM - 2300 PM
+                                </p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+1 5589 55488 55s</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="8" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Tour Booking End -->
 
-        <!-- Travel Guide Start -->
-        <div class="container-fluid guide py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Travel Guide</h5>
-                    <h1 class="mb-0">Meet Our Guide</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Travel Guide End -->
 
-        <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Our Blog</h5>
-                    <h1 class="mb-4">Popular Travel Blogs</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt tenetur sapiente atque. Magni non explicabo beatae sit, vel reiciendis consectetur numquam id similique sunt error obcaecati ducimus officia maiores.
-                    </p>
                 </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <div class="blog-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src="img/blog-1.jpg" alt="Image">
-                                    <div class="blog-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
-                                </div>
-                            </div>
-                            <div class="blog-content border border-top-0 rounded-bottom p-4">
-                                <p class="mb-3">Posted By: Royal Hamblin </p>
-                                <a href="#" class="h4">Adventures Trip</a>
-                                <p class="my-3">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <div class="blog-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src="img/blog-2.jpg" alt="Image">
-                                    <div class="blog-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
-                                </div>
-                            </div>
-                            <div class="blog-content border border-top-0 rounded-bottom p-4">
-                                <p class="mb-3">Posted By: Royal Hamblin </p>
-                                <a href="#" class="h4">Adventures Trip</a>
-                                <p class="my-3">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <div class="blog-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src="img/blog-3.jpg" alt="Image">
-                                    <div class="blog-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
-                                </div>
-                            </div>
-                            <div class="blog-content border border-top-0 rounded-bottom p-4">
-                                <p class="mb-3">Posted By: Royal Hamblin </p>
-                                <a href="#" class="h4">Adventures Trip</a>
-                                <p class="my-3">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Testimonial</h5>
-                    <h1 class="mb-0">Our Clients Say!!!</h1>
-                </div>
-                <div class="testimonial-carousel owl-carousel">
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-        <!-- Testimonial End -->
+        </section><!-- End Contact Section -->
 
-        <!-- Subscribe Start -->
-        <div class="container-fluid subscribe py-5">
-            <div class="container text-center py-5">
-                <div class="mx-auto text-center" style="max-width: 900px;">
-                    <h5 class="subscribe-title px-3">Subscribe</h5>
-                    <h1 class="text-white mb-4">Our Newsletter</h1>
-                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
-                    </p>
-                    <div class="position-relative mx-auto">
-                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Subscribe End -->
+    </main><!-- End #main -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <div class="row gy-3 gx-2 mb-4">
-                                <div class="col-xl-6">
-                                    <form>
-                                        <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
-                                            </select>
-                                            <label for="select1">English</label>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-xl-6">
-                                    <form>
-                                        <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
-                                            </select>
-                                            <label for="select1">$</label>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <h4 class="text-white mb-3">Payments</h4>
-                            <div class="footer-bank-card">
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright text-body py-4">
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
             <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>Restaurantly</h3>
+                            <p>
+                                A108 Adam Street <br>
+                                NY 535022, USA<br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 text-center text-md-start">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
                     </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="{{asset('travela')}}/assets/https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="{{asset('travela')}}/assets/https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="{{asset('travela')}}/assets/lib/easing/easing.min.js"></script>
-        <script src="{{asset('travela')}}/assets/lib/waypoints/waypoints.min.js"></script>
-        <script src="{{asset('travela')}}/assets/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="{{asset('travela')}}/assets/lib/lightbox/js/lightbox.min.js"></script>
-        
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-        <!-- Template Javascript -->
-        <script src="{{asset('travela')}}/assets/js/main.js"></script>
-    </body>
+    <!-- Vendor JS Files -->
+    <script src="{{asset('homepage')}}/assets/vendor/aos/aos.js"></script>
+    <script src="{{asset('homepage')}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('homepage')}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="{{asset('homepage')}}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="{{asset('homepage')}}/assets/vendor/php-email-form/validate.js"></script>
+    <script src="{{asset('homepage')}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{asset('homepage')}}/assets/js/main.js"></script>
+
+</body>
 
 </html>
