@@ -92,8 +92,12 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="{{route('obyek_wisata.index')}}" class="btn btn-primary">Kembali</a>
-                </div>
+                    @auth
+                        <a href="{{ route('paket_wisata.index') }}" class="btn btn-primary">Kembali</a>
+                    @else
+                        <a href="{{ route('homepage') }}" class="btn btn-primary">Kembali</a>
+                    @endauth
+                </div>            
             </div>
         </div>
     </div>

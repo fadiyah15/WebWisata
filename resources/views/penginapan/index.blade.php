@@ -17,11 +17,11 @@
                                 <th class="border-info">Nama Penginapan</th>
                                 <th class="border-info">Deskripsi</th>
                                 <th class="border-info">Fasilitas</th>
-                                <th class="border-info">Foto1</th>
+                                <!-- <th class="border-info">Foto1</th>
                                 <th class="border-info">Foto2</th>
                                 <th class="border-info">Foto3</th>
                                 <th class="border-info">Foto4</th>
-                                <th class="border-info">Foto5</th>
+                                <th class="border-info">Foto5</th> -->
                                 <th class="border-info">Opsi</th>
                             </tr>
                         </thead>
@@ -32,7 +32,7 @@
                                 <td class="border-info" id={{$key+1}}>{{$pn->nama_penginapan}}</td>
                                 <td class="border-info" id={{$key+1}}>{{$pn->deskripsi}}</td>
                                 <td class="border-info" id={{$key+1}}>{{$pn->fasilitas}}</td>
-                                <td class="border-info">
+                                <!-- <td class="border-info">
                                     <img src="{{asset('storage/Foto penginapan/' .$pn->foto1)}}" alt="{{$pn->foto1}} tidak tampil"
                                         class="img-thumbnail">
                                 </td>
@@ -51,9 +51,23 @@
                                 <td class="border-info">
                                     <img src="{{asset('storage/Foto penginapan/' .$pn->foto5)}}" alt="{{$pn->foto5}} tidak tampil"
                                         class="img-thumbnail">
-                                </td>
+                                </td> -->
                                 <td class="border-info">
-                                    @include('components.action-buttons', ['id' => $pn->id, 'key' => $key, 'route' => 'penginapan'])
+                                <div class="btn-group">
+                                        <a href="{{ route('penginapan' . '.detail', $pn->id) }}"
+                                            class="btn btn-info btn-xs">
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-primary btn-xs edit-button mx-1" data-toggle="modal"
+                                            data-target="#editModal{{$pn->id}}" data-id="{{$pn->id}}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="{{ route('penginapan' . '.destroy', $pn->id) }}"
+                                            onclick="notificationBeforeDelete(event, this, {{$key+1}})"
+                                            class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach

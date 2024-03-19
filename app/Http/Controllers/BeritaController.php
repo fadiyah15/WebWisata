@@ -71,7 +71,7 @@ class BeritaController extends Controller
                 'berita'=> 'required',
                 'tgl_post'=> 'required',
                 'id_kategori_berita' => 'required',
-                'foto'=> 'required'
+                'foto'=> ''
                 ]);
 
             $berita = Berita::find($id);

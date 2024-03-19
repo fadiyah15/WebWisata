@@ -115,11 +115,11 @@ class ObyekWisataController extends Controller
                 'deskripsi_wisata',
                 'id_kategori_wisata',
                 'fasilitas'=> 'required',
-                'foto1'=> 'required',
-                'foto2'=> 'required',
-                'foto3'=> 'required',
-                'foto4'=> 'required',
-                'foto5'=> 'required'
+                'foto1'=> '',
+                'foto2'=> '',
+                'foto3'=> '',
+                'foto4'=> '',
+                'foto5'=> ''
                 ]);
 
             $obyek_wisata = ObyekWisata::find($id);

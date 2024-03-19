@@ -20,6 +20,7 @@ Auth::routes(["login" => false, "register" => false]);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('/paket_wisata/{id}', [\App\Http\Controllers\PaketWisataController::class, 'detail'])->name('paket_wisata.detail');
+Route::get('/penginpan/{id}', [\App\Http\Controllers\PenginapanController::class, 'detail'])->name('penginapan.detail');
 Route::get('berita/{berita:id}', [\App\Http\Controllers\HomeController::class, 'show'])->name('beritashow');
 Route::get('/obyek_wisata/{id}', [\App\Http\Controllers\ObyekWisataController::class, 'detail'])->name('obyek_wisata.detail');
 Route::get('obyek_wisata/{obyek_wisata:id}', [\App\Http\Controllers\HomeController::class, 'obyekshow'])->name('obyekshow');

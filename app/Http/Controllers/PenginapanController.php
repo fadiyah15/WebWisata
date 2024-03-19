@@ -16,6 +16,15 @@ class PenginapanController extends Controller
         ]);
     }
 
+    public function detail(Request $request, $id)
+    {
+        $penginapan = Penginapan::findOrFail($id);    
+        return view('penginapan.detail', [
+            'penginapan' => $penginapan,
+        ]);
+    }
+
+
         public function store(Request $request) {
             //Menyimpan Data penginapan
             $request->validate([ 
@@ -84,11 +93,11 @@ class PenginapanController extends Controller
                 'nama_penginapan'=> 'required',
                 'deskripsi'=> 'required',
                 'fasilitas'=> 'required',
-                'foto1'=> 'required',
-                'foto2'=> 'required',
-                'foto3'=> 'required',
-                'foto4'=> 'required',
-                'foto5'=> 'required'
+                'foto1'=> '',
+                'foto2'=> '',
+                'foto3'=> '',
+                'foto4'=> '',
+                'foto5'=> ''
                 ]);
 
             $penginapan = Penginapan::find($id);

@@ -108,11 +108,11 @@ class PaketWisataController extends Controller
                 'fasilitas'=> 'required',
                 'harga_per_pack'=> 'required',
                 'diskon'=> 'required',
-                'foto1'=> 'required',
-                'foto2'=> 'required',
-                'foto3'=> 'required',
-                'foto4'=> 'required',
-                'foto5'=> 'required'
+                'foto1'=> '',
+                'foto2'=> '',
+                'foto3'=> '',
+                'foto4'=> '',
+                'foto5'=> ''
             ]);
 
             $paket_wisata = PaketWisata::find($id);
